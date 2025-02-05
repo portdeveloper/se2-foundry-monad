@@ -32,11 +32,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Install dependencies:
 
 ```
-cd my-dapp-example
-yarn install
-
-cd packages/foundry
-forge install
+cd se2-foundry-monad
+yarn install && forge install --root packages/foundry
 ```
 
 2. Run a local network in the first terminal:
