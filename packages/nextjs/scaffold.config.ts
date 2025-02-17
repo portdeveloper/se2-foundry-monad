@@ -22,8 +22,8 @@ export const monadDevnet = defineChain({
   },
   blockExplorers: {
     default: {
-      name: "Monad Devnet Blockscout",
-      url: process.env.NEXT_PUBLIC_MONAD_BLOCKSCOUT_URL || "",
+      name: "Monad Devnet BlockVision",
+      url: process.env.NEXT_PUBLIC_MONAD_BLOCKVISION_URL || "",
     },
   },
 });
