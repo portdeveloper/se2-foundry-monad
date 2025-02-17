@@ -11,9 +11,9 @@ export type ScaffoldConfig = {
 
 export const DEFAULT_ALCHEMY_API_KEY = "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
 
-export const monadDevnet = defineChain({
+export const monad = defineChain({
   id: Number(process.env.NEXT_PUBLIC_MONAD_CHAIN_ID),
-  name: "Monad Devnet",
+  name: "Monad Testnet",
   nativeCurrency: { name: "Monad", symbol: "DMON", decimals: 18 },
   rpcUrls: {
     default: {
@@ -22,7 +22,7 @@ export const monadDevnet = defineChain({
   },
   blockExplorers: {
     default: {
-      name: "Monad Devnet BlockVision",
+      name: "Monad Testnet BlockVision",
       url: process.env.NEXT_PUBLIC_MONAD_BLOCKVISION_URL || "",
     },
   },
@@ -30,8 +30,8 @@ export const monadDevnet = defineChain({
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.foundry], // change to monadDevnet when you want to go production like below
-  // targetNetworks: [monadDevnet],
+  targetNetworks: [chains.foundry], // change to monad when you want to go production like below
+  // targetNetworks: [monad],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)

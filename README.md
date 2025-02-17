@@ -1,4 +1,4 @@
-# 🏗 Scaffold-ETH 2 - Foundry Edition + Monad Devnet configuration
+# 🏗 Scaffold-ETH 2 - Foundry Edition + Monad configuration
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
@@ -66,7 +66,7 @@ Run smart contract test with `yarn foundry:test`
 - Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
 - Edit your deployment scripts in `packages/foundry/script`
 
-## Deploying to Monad Devnet
+## Deploying to Monad
 
 ### Smart Contracts 
 
@@ -76,37 +76,37 @@ First, check out the existing `.env` file and fill in the necessary values:
 MONAD_RPC_URL= 
 MONAD_SOURCIFY_VERIFIER_URL=
 
-# Do not change the name of the variable below, put monad chain id here
+# Do not change the name of the variable below, put Monad chain id here
 FOUNDRY_CHAIN_ID=
 ```
 
-Also, change the `ETH_KEYSTORE_ACCOUNT` to `scaffold-eth-custom` to deploy on Monad Devnet!
+Also, change the `ETH_KEYSTORE_ACCOUNT` to `scaffold-eth-custom` to deploy!
 
-Then, run the following command to deploy your contract to Monad Devnet:
+Then, run the following command to deploy your contract to Monad:
 
 ```
-yarn deploy --network monad_devnet
+yarn deploy --network monad
 ```
 
 To verify your contract, run the following command:
 ```
-yarn verify --network monad_devnet
+yarn verify --network monad
 ```
 
 To run both deploy and verify, run the following command:
 
 ```
-yarn deploy --network monad_devnet && yarn verify --network monad_devnet
+yarn deploy --network monad && yarn verify --network monad
 ```
 
 ### Frontend
 
 First, copy the `.env.example` file to `.env.local` and fill in the values.
 
-Then, change the target network in `packages/nextjs/scaffold.config.ts` to `monadDevnet`
+Then, change the target network in `packages/nextjs/scaffold.config.ts` to `monad`
 
 ```
-targetNetworks: [monadDevnet],
+targetNetworks: [monad],
 ```
 
 Then, run the following command to deploy your nextjs app to production:
