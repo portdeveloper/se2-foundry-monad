@@ -21,7 +21,7 @@ interface tempVm {
 }
 
 contract VerifyAll is Script {
-    string VERIFIER_URL = vm.envString("MONAD_VERIFIER_URL");
+    string VERIFIER_URL = vm.envString("MONAD_SOURCIFY_VERIFIER_URL");
     uint96 currTransactionIdx;
 
     function run() external {

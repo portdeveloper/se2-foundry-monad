@@ -74,7 +74,7 @@ First, check out the existing `.env` file and fill in the necessary values:
 
 ```
 MONAD_RPC_URL= 
-MONAD_VERIFIER_URL=
+MONAD_SOURCIFY_VERIFIER_URL=
 
 # Do not change the name of the variable below, put monad chain id here
 FOUNDRY_CHAIN_ID=
