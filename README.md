@@ -73,7 +73,7 @@ Run smart contract test with `yarn foundry:test`
 First, check out the existing `.env` file and fill in the necessary values:
 
 ```
-MONAD_DEVNET_RPC_URL= 
+MONAD_RPC_URL= 
 MONAD_VERIFIER_URL=
 
 # Do not change the name of the variable below, put monad chain id here
