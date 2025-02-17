@@ -67,7 +67,7 @@ contract VerifyAll is Script {
         inputs[7] = vm.toString(constructorArgs);
         inputs[8] = "--watch";
         inputs[9] = "--verifier";
-        inputs[10] = "blockscout";
+        inputs[10] = "sourcify";
         inputs[11] = "--verifier-url";
         inputs[12] = VERIFIER_URL;
 
