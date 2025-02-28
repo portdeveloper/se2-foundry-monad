@@ -22,6 +22,8 @@ contract YourContract {
 
     // Events: a way to emit log statements from smart contract that can be listened to by external parties
     event GreetingChange(address indexed greetingSetter, string newGreeting, bool premium, uint256 value);
+    // An anonymous event doesn't store the event signature as topic 0
+    event AnonymousLog(string message, uint256 timestamp) anonymous;
 
     // Constructor: Called once on contract deployment
     // Check packages/foundry/deploy/Deploy.s.sol
@@ -61,6 +63,8 @@ contract YourContract {
 
         // emit: keyword used to trigger an event
         emit GreetingChange(msg.sender, _newGreeting, msg.value > 0, msg.value);
+        // Also emit the anonymous event
+        emit AnonymousLog(_newGreeting, block.timestamp);
     }
 
     /**
