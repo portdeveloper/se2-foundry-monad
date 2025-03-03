@@ -21,7 +21,6 @@ interface tempVm {
 }
 
 contract VerifyAll is Script {
-    string VERIFIER_URL = vm.envString("MONAD_SOURCIFY_VERIFIER_URL");
     uint96 currTransactionIdx;
 
     function run() external {
@@ -69,7 +68,7 @@ contract VerifyAll is Script {
         inputs[9] = "--verifier";
         inputs[10] = "sourcify";
         inputs[11] = "--verifier-url";
-        inputs[12] = VERIFIER_URL;
+        inputs[12] = "https://sourcify-api-monad.blockvision.org";
 
         FfiResult memory f = tempVm(address(vm)).tryFfi(inputs);
 
