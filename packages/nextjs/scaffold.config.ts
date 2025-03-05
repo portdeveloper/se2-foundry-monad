@@ -11,28 +11,37 @@ export type ScaffoldConfig = {
 
 export const DEFAULT_ALCHEMY_API_KEY = "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
 
-const monadTestnet = defineChain({
-  id: 10143,
+export const monadTestnet = defineChain({
+  id: 10_143,
   name: "Monad Testnet",
-  nativeCurrency: { name: "MON", symbol: "MON", decimals: 18 },
+  nativeCurrency: {
+    name: "Testnet MON Token",
+    symbol: "MON",
+    decimals: 18,
+  },
   rpcUrls: {
     default: {
-      http: [
-        "https://testnet-rpc2.monad.xyz/52227f026fa8fac9e2014c58fbf5643369b3bfc6",
-      ],
+      http: ["https://testnet-rpc.monad.xyz"],
     },
   },
   blockExplorers: {
     default: {
-      name: "Monad Testnet BlockVision",
-      url: "https://sourcify-api-monad.blockvision.org",
+      name: "Monad Testnet explorer",
+      url: "https://testnet.monadexplorer.com",
     },
   },
+  contracts: {
+    multicall3: {
+      address: "0xcA11bde05977b3631167028862bE2a173976CA11",
+      blockCreated: 251449,
+    },
+  },
+  testnet: true,
 });
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.foundry, monadTestnet],
+  targetNetworks: [monadTestnet],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)
